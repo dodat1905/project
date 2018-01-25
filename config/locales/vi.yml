@@ -72,6 +72,8 @@ vi:
             age:
               blank: "không được để trống"
               not_a_number: "không phải là số"
+            address:
+              blank: "không được để trống"
   the_form_contains: "Biểu mẫu có chứa "
   error: "lỗi"
   sign_up: "Đăng kí"
@@ -80,3 +82,20 @@ vi:
   the_form_contains: "Biểu mẫu có chứa "
   error: "lỗi"
   remember_me: "Nhớ tài khoản"
+  edit_user: "Sửa người dùng"
+  helpers:
+    submit:
+      create: "Tạo người dùng"
+      update: "Cập nhật người dùng"
+  profile_updated: "Hồ sơ cá nhân đã cập nhật"
+  all_users: "Tất cả người dùng"
+  are_you_sure: "Bạn chắc chứ?"
+  delete: "Xóa"
+  user_deleted: "Đã xóa người dùng này"
+  will_paginate:
+    previous_label: "&#8592; Trước"
+    next_label: "Sau &#8594;"
+    page_gap: "&hellip;"
+  change: "Thay Avatar"
+  address: "Địa chỉ"
+  pleased_log_in: "Vui lòng đăng nhập"
