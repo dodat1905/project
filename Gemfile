@@ -27,6 +27,7 @@ group :development, :test do
  gem "database_cleaner"
  gem "brakeman", require: false
  gem "jshint"
+ gem "i18n-js"
  gem "bundler-audit"
  gem "rubocop", require: false
  gem "rubocop-checkstyle_formatter", require: false
@@ -35,6 +36,8 @@ group :development, :test do
  gem "rails_best_practices"
  gem "reek"
  gem "railroady"
+ gem "carrierwave", "1.2.2"
+ gem "mini_magick", "4.7.0"
  gem "will_paginate", "3.1.6"
  gem "bootstrap-will_paginate", "1.0.0"
  gem "autoprefixer-rails"

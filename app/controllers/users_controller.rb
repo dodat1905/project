@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  attr_reader :user
+  attr_reader :user, :microposts
 
   before_action :logged_in_user, only: %i(index edit update destroy)
   before_action :find_user, only: %i(edit show update destroy)
@@ -26,8 +26,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    return if user.activated?
-    redirect_to root_url
+    @microposts = user.microposts.desc.paginate page: params[:page]
   end
 
   def edit; end
@@ -52,13 +51,6 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit :name, :email, :password,
       :password_confirmation, :age, :address
-  end
-
-  def logged_in_user
-    return if logged_in?
-    store_location
-    flash[:danger] = t "pleased_log_in"
-    redirect_to login_url
   end
 
   def correct_user

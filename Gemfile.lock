@@ -82,6 +82,10 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (>= 2.0, < 4.0)
+    carrierwave (1.2.2)
+      activemodel (>= 4.0.0)
+      activesupport (>= 4.0.0)
+      mime-types (>= 1.16)
     code_analyzer (0.4.8)
       sexp_processor
     codeclimate-engine-rb (0.4.1)
@@ -167,6 +171,8 @@ GEM
       rspec (>= 2.99.0, < 4.0)
     i18n (0.9.3)
       concurrent-ruby (~> 1.0)
+    i18n-js (3.0.4)
+      i18n (~> 0.6, >= 0.6.6)
     ice_nine (0.11.2)
     inflecto (0.0.2)
     jbuilder (2.7.0)
@@ -196,6 +202,10 @@ GEM
     mail (2.7.0)
       mini_mime (>= 0.1.1)
     method_source (0.9.0)
+    mime-types (3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0521)
+    mini_magick (4.7.0)
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
@@ -389,6 +399,7 @@ DEPENDENCIES
   bundler-audit
   byebug
   capybara (~> 2.13)
+  carrierwave (= 1.2.2)
   coffee-rails (~> 4.2)
   config
   database_cleaner
@@ -396,11 +407,13 @@ DEPENDENCIES
   factory_bot_rails
   faker (= 1.7.3)
   guard-rspec
+  i18n-js
   jbuilder (~> 2.5)
   jquery-rails
   jquery-turbolinks
   jshint
   listen (>= 3.0.5, < 3.2)
+  mini_magick (= 4.7.0)
   minitest
   minitest-reporters
   puma (~> 3.7)

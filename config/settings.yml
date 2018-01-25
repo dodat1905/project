@@ -7,3 +7,7 @@ password:
 address:
   maximum: 255
 hours_ago: 2
+length_content: 140
+megabytes: 5
+picture:
+  size: 400
