@@ -23,7 +23,7 @@ ProtectMassAssignmentCheck: { ignored_files: 'models/application_record.rb' }
 RemoveEmptyHelpersCheck: { }
 #RemoveTabCheck: { }
 RemoveTrailingWhitespaceCheck: { }
-RemoveUnusedMethodsInControllersCheck: { except_methods: [] }
+RemoveUnusedMethodsInControllersCheck: { except_methods: [], ignored_files: 'app/controllers/static_pages_controller.rb'  }
 RemoveUnusedMethodsInHelpersCheck: { except_methods: [] }
 RemoveUnusedMethodsInModelsCheck: { except_methods: [] }
 ReplaceComplexCreationWithFactoryMethodCheck: { attribute_assignment_count: 2 }

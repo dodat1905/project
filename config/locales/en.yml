@@ -39,17 +39,18 @@ en:
    text2: " Is A "
    book: " Book"
    and: " And"
-   This is the sample application for the tutorial: "This Is The Sample Application For The Tutorial."
+   this_is_the_sample_application_for_the_tutorial: "This Is The Sample Application For The Tutorial."
   contact:
-   Contact: "Contact"
-   Contact the Ruby on Rails Tutorial about the sample app at the: "Contact the Ruby on Rails Tutorial about the sample app at the " 
+   contact: "Contact"
+   contact_the_ruby_on_rails_tutorial_about_the_sample_app_at_the: "Contact the Ruby on Rails Tutorial about the sample app at the " 
   help:
-   Help: "Help"
+   help: "Help"
    text: "Ruby On Rails Tutorial"
-   text2: "Book"
+   text2: " Book"
   home:
-    text: "sample application."
-    Home: "Home"
+    text: "Sample Application."
+    text1: "Home"
+    this_is_the_home_page_for_the: "This Is The Home Page For The "
  layouts:
   application:
    title: "Ruby on Rails Tutorial Sample App"
