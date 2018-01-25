@@ -49,8 +49,9 @@ group :test do
  gem "simplecov-rcov", require: false
  gem "simplecov-json"
  gem "shoulda-matchers"
- gem 'minitest', group: :test
- gem 'minitest-reporters', group: :test
+ gem "minitest", group: :test
+ gem "minitest-reporters", group: :test
 end
 
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
