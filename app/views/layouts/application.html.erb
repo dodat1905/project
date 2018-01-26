@@ -1,29 +1,15 @@
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
-<head>
-  <title><%= yield :title %> | <%= t ".title" %></title>
-   <%= csrf_meta_tags %>
-   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
- </head>
- <body>
-  <%= yield %>
-   <%= link_to t(".en"), locale: :en %>
-   <%= link_to t(".vi"), locale: :vi %>
- </body>
-=======
   <head>
     <title><%= yield :title %> | <%= t ".title" %></title>
-      <%= csrf_meta_tags %>
-      <%= stylesheet_link_tag 'application',
-        media: 'all', 'data-turbolinks-track': 'reload' %>
-      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag 'application',
+      media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
     <%= yield %>
     <%= link_to t(".en"), locale: :en %>
     <%= link_to t(".vi"), locale: :vi %>
   </body>
->>>>>>> 890aed9e352d43dc0fe2d8f6deb1eb3ac37f07ab
 </html>
