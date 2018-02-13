@@ -8,6 +8,7 @@ class User < ApplicationRecord
     presence: true, uniqueness: {case_sensitive: false}, length: {maximum: Settings.email.maximum}
   validates :password, presence: true, length: {minimum: Settings.password.minimum}, allow_nil: true
   validates :age, presence: true, numericality: {only_integer: true}
+  validates :address, presence: true, length: {maximum: Settings.address.maximum}
   before_save :emaildowncase
 
   has_secure_password
@@ -40,6 +41,10 @@ class User < ApplicationRecord
 
   def forget
     update_attributes remember_digest: nil
+  end
+
+  def current_user? current_user
+    self == current_user
   end
 
   private
