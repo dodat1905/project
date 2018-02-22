@@ -20,7 +20,7 @@ $bbb: #bbb;
   @include box-sizing;
   clear: both;
   float: left;
-  margin-top: 45px;  
+  margin-top: 45px;
   width: 100%;
 }
 
@@ -140,7 +140,7 @@ aside {
     .user-info {
       @extend section;
     }
-    
+
     span {
       display: block;
       line-height: 1;
@@ -166,7 +166,7 @@ aside {
   margin-top: 15px;
 }
 
- //form 
+ //form
 
 input,
 textarea,
