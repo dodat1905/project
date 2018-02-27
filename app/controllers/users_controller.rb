@@ -26,7 +26,7 @@ class UsersController < ApplicationController
   end
 
   def show
-    return unless user.activated?
+    return if user.activated?
     redirect_to root_url
   end
 

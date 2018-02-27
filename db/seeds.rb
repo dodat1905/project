@@ -13,4 +13,3 @@ User.create!(name: "Đỗ Quốc Đạt", email: "dodat1905@gmail.com",
     password_confirmation: password, age: age,
     address: address, activated: true, activated_at: Time.zone.now)
 end
-
