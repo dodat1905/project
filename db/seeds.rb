@@ -3,7 +3,7 @@ User.create!(name: "Đỗ Quốc Đạt", email: "dodat1905@gmail.com",
   age: "20", address: "394 Bạch Đằng, Chương Dương, Hoàn Kiếm, Hà Nội",
   admin: true, activated: true, activated_at: Time.zone.now)
 
-25.times do |n|
+50.times do |n|
   name  = Faker::Name.name
   email = "example-#{n+1}@railstutorial.org"
   password = "password"

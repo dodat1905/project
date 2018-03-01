@@ -35,3 +35,6 @@ config/environments/*.local.yml
 
 # Ignore uploaded test images.
 /public/uploads
+
+# Ignore directory file in Kubuntu
+/.directory
