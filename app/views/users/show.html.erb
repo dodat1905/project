@@ -9,12 +9,19 @@
         <br /><%= t "address" %>: <%= @user.address %>
       </h1>
     </section>
+    <section class="stats">
+      <%= render "shared/stats", user: @user %>
+    </section>
   </aside>
   <div class="col-md-8">
+    <%= render "follow_form", create_relationship: @supports.create_relationship,
+      destroy_relationship: @supports.destroy_relationship,
+      user: @user if logged_in? %>
     <% if @user.microposts.any? %>
-      <h3><%= t "micropost" %> (<%= @user.microposts.count %>)</h3>
+      <h3><%= t "micropost" %><%= @user.microposts.count %></h3>
       <ol class="microposts">
-       <%= render partial: "microposts/micropost", collection: @microposts %>
+       <%= render partial: "microposts/micropost",
+         collection: @microposts %>
       </ol>
       <%= will_paginate @microposts %>
     <% end %>

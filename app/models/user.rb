@@ -4,6 +4,12 @@ class User < ApplicationRecord
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
 
   has_many :microposts, dependent: :destroy
+  has_many :active_relationships, inverse_of: :follower, class_name: Relationship.name,
+    foreign_key: :follower_id, dependent: :destroy
+  has_many :following, through: :active_relationships, source: :followed
+  has_many :passive_relationships, inverse_of: :followed, class_name: Relationship.name,
+    foreign_key: :followed_id, dependent: :destroy
+  has_many :followers, through: :passive_relationships, source: :follower
 
   validates :name, presence: true, length: {maximum: Settings.name.maximum}
   validates :email, format: {with: VALID_EMAIL_REGEX},
@@ -58,18 +64,10 @@ class User < ApplicationRecord
     update_attributes activated: true, activated_at: Time.zone.now
   end
 
-  def send_activation_email
-    UserMailer.account_activation(self).deliver_now
-  end
-
   def create_reset_digest
     @reset_token = User.new_token
     update_attributes reset_digest: User.digest(reset_token),
       reset_sent_at: Time.zone.now
-  end
-
-  def send_password_reset_email
-    UserMailer.password_reset(self).deliver_now
   end
 
   def password_reset_expired?
@@ -77,8 +75,20 @@ class User < ApplicationRecord
     reset_sent_at < expired.hours.ago
   end
 
+  def follow other_user
+    following << other_user
+  end
+
+  def unfollow other_user
+    following.delete other_user
+  end
+
+  def following? other_user
+    following.include? other_user
+  end
+
   def feed
-    microposts
+    Micropost.following_ids self
   end
 
   private

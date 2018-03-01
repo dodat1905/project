@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if user.save
-      user.send_activation_email
+      UserMailer.account_activation(user).deliver_now
       flash[:info] = t "please_check_your_email_to_activate_your_account"
       redirect_to root_url
     else
@@ -27,6 +27,7 @@ class UsersController < ApplicationController
 
   def show
     @microposts = user.microposts.desc.paginate page: params[:page]
+    @supports = Supports::User.new user: user, current_user: current_user, followed_id: user.id
   end
 
   def edit; end
@@ -47,6 +48,10 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def active_relationships
+    current_user.active_relationships
+  end
 
   def user_params
     params.require(:user).permit :name, :email, :password,
