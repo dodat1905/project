@@ -119,3 +119,59 @@ vi:
   this_link_will_expire_in_two_hours: "Liên kết này sẽ hết hạn sau hai giờ."
   content_password_reset: "Nếu bạn không yêu cầu đặt lại mật khẩu,
     vui lòng bỏ qua email này và mật khẩu của bạn sẽ vẫn như nó được."
+  pleased_log_in: "Vui lòng đăng nhập"
+  micropost_created: "Bài viết đã được tạo!"
+  micropost_deleted: "Bài viết đã xóa!"
+  less_5mb: "nên nhỏ hơn 5MB"
+  compose_new_micropost: "Soạn thảo bài viết mới..."
+  view_my_profile: "Xem trang cá nhân"
+  microposts: "bài viết"
+  micropost_feed: "Bài viết mới nhất"
+  micropost: "Bài viết"
+  posted: "Đăng "
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: khoảng 1 giờ
+        other: khoảng %{count} giờ
+      about_x_months:
+        one: khoảng 1 tháng
+        other: khoảng %{count} tháng
+      about_x_years:
+        one: khoảng 1 năm
+        other: khoảng %{count} năm
+      almost_x_years:
+        one: gần 1 năm
+        other: gần %{count} năm
+      half_a_minute: 30 giây
+      less_than_x_minutes:
+        one: chưa tới 1 phút
+        other: chưa tới %{count} phút
+      less_than_x_seconds:
+        one: chưa tới 1 giây
+        other: chưa tới %{count} giây
+      over_x_years:
+        one: hơn 1 năm
+        other: hơn %{count} năm
+      x_days:
+        one: 1 ngày
+        other: "%{count} ngày"
+      x_minutes:
+        one: 1 phút
+        other: "%{count} phút"
+      x_months:
+        one: 1 tháng
+        other: "%{count} tháng"
+      x_seconds:
+        one: 1 giây
+        other: "%{count} giây"
+    prompts:
+      day: Ngày
+      hour: Giờ
+      minute: Phút
+      month: Tháng
+      second: Giây
+      year: Năm
+  ago: "trước"
+  maximum_upload: "Kích thước tệp tối đa là 5MB. Vui lòng chọn một tệp nhỏ hơn."
+  post: "Gửi"
