@@ -127,7 +127,7 @@ vi:
   view_my_profile: "Xem trang cá nhân"
   microposts: "bài viết"
   micropost_feed: "Bài viết mới nhất"
-  micropost: "Bài viết"
+  micropost: "Bài viết "
   posted: "Đăng "
   datetime:
     distance_in_words:
@@ -175,3 +175,7 @@ vi:
   ago: "trước"
   maximum_upload: "Kích thước tệp tối đa là 5MB. Vui lòng chọn một tệp nhỏ hơn."
   post: "Gửi"
+  unfollow: "Bỏ theo dõi"
+  follow: "Theo dõi"
+  followers: "Người theo dõi"
+  following: "Đang theo dõi"
