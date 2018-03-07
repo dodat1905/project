@@ -1,12 +1,12 @@
-<% provide :title, @user.name %>
+<% provide :title, @user.profile.name %>
 <div class="row">
   <aside class="col-md-4">
     <section class="user-info">
       <h1>
         <%= gravatar_for @user %>
-        <%= @user.name %>
-        <%= t "age" %><%= @user.age %>
-        <br /><%= t "address" %>: <%= @user.address %>
+        <%= @user.profile.name %>
+        <%= t "age" %><%= @user.profile.age %>
+        <br /><%= t "address" %>: <%= @user.profile.address %>
       </h1>
     </section>
     <section class="stats">

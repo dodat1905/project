@@ -1,7 +1,8 @@
-User.create!(name: "Đỗ Quốc Đạt", email: "dodat1905@gmail.com",
+User.create!(email: "dodat1905@gmail.com",
   password: "123456", password_confirmation: "123456",
-  age: "20", address: "394 Bạch Đằng, Chương Dương, Hoàn Kiếm, Hà Nội",
-  admin: true, activated: true, activated_at: Time.zone.now)
+  admin: true, activated: true, activated_at: Time.zone.now,
+  profile_attributes: {name: "Đỗ Quốc Đạt", age: "20",
+    address: "394 Bạch Đằng, Chương Dương, Hoàn Kiếm, Hà Nội"})
 
 50.times do |n|
   name  = Faker::Name.name
@@ -9,9 +10,11 @@ User.create!(name: "Đỗ Quốc Đạt", email: "dodat1905@gmail.com",
   password = "password"
   address = Faker::Address.street_address
   age = "21"
-  User.create!(name: name, email: email, password: password,
-    password_confirmation: password, age: age,
-    address: address, activated: true, activated_at: Time.zone.now)
+  User.create!(email: email, password: password,
+    password_confirmation: password, activated: true,
+    activated_at: Time.zone.now,
+    profile_attributes: {name: name, age: "20",
+      address: address})
 end
 
 users = User.order(:created_at).take(6)

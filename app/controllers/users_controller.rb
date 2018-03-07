@@ -12,15 +12,16 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
+    user.build_profile
   end
 
   def create
     @user = User.new user_params
     if user.save
       UserMailer.account_activation(user).deliver_now
-      flash[:info] = t "please_check_your_email_to_activate_your_account"
-      redirect_to root_url
+      notice_redirect
     else
+      user.profile || user.build_profile
       render :new
     end
   end
@@ -53,9 +54,14 @@ class UsersController < ApplicationController
     current_user.active_relationships
   end
 
+  def notice_redirect
+    flash[:info] = t "please_check_your_email_to_activate_your_account"
+    redirect_to root_url
+  end
+
   def user_params
-    params.require(:user).permit :name, :email, :password,
-      :password_confirmation, :age, :address
+    params.require(:user).permit :email, :password,
+      :password_confirmation, profile_attributes: [:name, :age, :address]
   end
 
   def correct_user
