@@ -57,10 +57,17 @@ vi:
   activerecord:
     errors:
       models:
-        user:
+        profile:
           attributes:
+            age:
+              blank: "không thể để trống"
+              not_a_number: "không phải là số"
             name: 
               blank: "không thể để trống"
+            address:
+              blank: "không được để trống"
+        user:
+          attributes:
             email:
               invalid: "không hợp lệ"
               blank: "không được để trống"    
@@ -69,11 +76,7 @@ vi:
               too_short: "quá ngắn (tối thiểu là 6 ký tự)"
             password_confirmation:
               blank: "không được để trống"
-            age:
-              blank: "không được để trống"
-              not_a_number: "không phải là số"
-            address:
-              blank: "không được để trống"
+
   the_form_contains: "Biểu mẫu có chứa "
   error: "lỗi"
   sign_up: "Đăng kí"
