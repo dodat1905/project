@@ -1,0 +1,142 @@
+en:
+  following: Following
+  followers: Followers
+  less_than_5mb: should be less than 5MB
+  micropost_delete_failed: Micropost delete failed.
+  micropost_deleted: Micropost deleted
+  micropost_created: Micropost created!
+  invalid_password: Invalid password
+  sent_password_reset: Email sent with password reset instructions
+  password_has_been_reset: Password has been reset.
+  password_reset_expired: Password reset has expired.
+  cant_be_empty: can't be empty
+  email_not_found: Email address not found
+  password_reset: Password reset
+  account_activation: Account activation
+  account_not_activated: Account not activated. 
+  check_email_to_active: Account not activated. Check your email for the activation link.
+  user_deleted: User deleted
+  user_deleted_failed: User deleted failed
+  check_email_to_active_account: Please check your email to active your account.
+  account_activated: Account activated!
+  input_invalid: Your data input not valid.
+  invalid_activation_link: Invalid activation link
+  invalid_email_password: Invalid email/password combination
+  user_not_found: User not found
+  welcome_sample_app: Welcome to the Sample App!
+  please_log_in: Please log in.
+  profile_updated: Profile updated
+  ror_tut_sample_app: Ruby on Rails Tutorial Sample App
+  password_resets:
+    new:
+      submit: Submit
+      forgot_password: Forgot password
+    edit:
+      reset_password: Reset password
+      confirmation: Confirmation
+      update_password: Update password
+  user_mailer:
+    password_reset:
+      password_reset: Password reset
+      guide_to_reset: "To reset your password click the link below:"
+      expire_in_two_hours: This link will expire in two hours.
+      content: If you did not request your password to be reset, please ignore this email and
+               your password will stay as it is.
+    account_activation:
+      hi: Hi
+      welcome_message: Welcome to the Sample App! Click on the link below to activate your account
+      sample_app: Sample App
+      activate: Activate
+  shared:
+    error_messages:
+      form_contains: The form contains
+      error: error
+    micropost_form:
+      maximum_file_size_msg: Maximum file size is 5MB. Please choose a smaller file.
+      post: Post
+      compose_new_micropost: Compose new micropost...
+    stats:
+      following: following
+      followers: followers
+    user_info:
+      view_my_profile: view my profile
+      micropost: micropost
+  microposts:
+    microposts:
+      you_sure: You sure?
+      delete: delete
+      posted: Posted
+      ago: ago
+  sessions:
+    new:
+      log_in: Log in
+      sign_up_now: Sign up now!
+      remember_me: Remember me on this computer
+      new_user: New user?
+      forgot_password: (Forgot password)
+  layouts:
+    header:
+      users: Users
+      account: Account
+      profile: Profile
+      settings: Settings
+      log_out: Log out
+      sample_app: sample app
+      home: Home
+      help: Help
+      log_in: Log in
+      account_html: Account <b class="caret"></b>
+    footer:
+      about: About
+      contact: Contact
+      news: News
+      the: The
+      by: by
+  users:
+    show_follow:
+      view_my_profile: view my profile
+      microposts: "Microposts:"
+    follow:
+      follow: Follow
+    unfollow:
+      unfollow: Unfollow
+    show:
+      microposts: Microposts
+    index:
+      all_users: All users
+    user:
+      you_sure: You sure?
+      delete: delete
+    new:
+      sign_up: Sign up
+      create_my_account: Create my account
+      confirmation: Confirmation
+    edit:
+      update_your_profile: Update your profile
+      edit_user: Edit user
+      save_changes: Save changes
+      change: change
+  static_pages:
+    home:
+      micropost_feed: Micropost Feed
+      sign_up_now: Sign up now!
+      welcome_to_sample_app: Welcome to the Sample App
+      sample_app: Sample App
+      home: Home
+      content_html: This is the home page for the %{href} sample application.
+    help:
+      rails_help_page: Rails Tutorial help page
+      ror_book_html: <em>Ruby on Rails Tutorial</em> book
+      help: Help
+      content_html: Get help on the Ruby on Rails Tutorial at the %{href1}. To get help on this sample app, see the %{href2}.
+    contact:
+      contact_page: contact page
+      contact: Contact
+      content_html: Contact the Ruby on Rails Tutorial about the sample app at the %{href}.
+    about:
+      about: About
+      book: book
+      screencast_series: screencast series
+      this_is_the_sample_application_for_the_tutorial:        
+      content_html: The %{href1} is a %{href2} and %{href3} to teach web development with %{href4}. 
+                    This is the sample application for the tutorial.
