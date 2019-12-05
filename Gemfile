@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
  gem "rails", "~> 5.1.4"
- gem "sqlite3"
+ gem "mysql2"
  gem "puma", "~> 3.7"
  gem "bootstrap-sass", "3.3.7"
  gem "sass-rails", "~> 5.0"
@@ -40,16 +40,19 @@ group :development, :test do
  gem "mini_magick", "4.7.0"
  gem "will_paginate", "3.1.6"
  gem "bootstrap-will_paginate", "1.0.0"
- gem "autoprefixer-rails"
  gem "faker", "1.7.3"
  gem "rails-controller-testing"
  gem "bcrypt", "3.1.11"
- gem "config"
  gem "jquery-rails"
  gem "jquery-turbolinks"
 end
 
 group :development do
+  gem "capistrano"
+  gem "capistrano3-puma"
+  gem "capistrano-rails", require: false
+  gem "capistrano-bundler", require: false
+  gem "capistrano-rvm"
  gem "web-console", ">= 3.3.0"
  gem "listen", ">= 3.0.5", "< 3.2"
  gem "spring"

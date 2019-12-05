@@ -15,8 +15,8 @@ class User < ApplicationRecord
   accepts_nested_attributes_for :profile
 
   validates :email, format: {with: VALID_EMAIL_REGEX},
-    presence: true, uniqueness: {case_sensitive: false}, length: {maximum: Settings.email.maximum}
-  validates :password, presence: true, length: {minimum: Settings.password.minimum}, allow_nil: true
+    presence: true, uniqueness: {case_sensitive: false}, length: {maximum: 120}
+  validates :password, presence: true, length: {minimum: 6}, allow_nil: true
 
   before_save :emaildowncase
   before_create :create_activation_digest
@@ -67,7 +67,7 @@ class User < ApplicationRecord
   end
 
   def password_reset_expired?
-    expired = Settings.hours_ago
+    expired = 2
     reset_sent_at < expired.hours.ago
   end
 
